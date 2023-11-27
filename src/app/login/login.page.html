@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true" class="login-page">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-card class="login-card">
+    <ion-card-header>
+      <ion-card-title>Ingreso de Usuario - Duoc UC</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item lines="full" class="form-item">
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input formControlName="nombre" type="text" required=""></ion-input>
+        </ion-item>
+        <ion-item lines="full" class="form-item">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="contrasena" type="password" required=""></ion-input>
+        </ion-item>
+
+        <ion-row class="button-row">
+          <ion-col>
+            <ion-button type="submit" color="primary" expand="block" (click)="ingresar()">INGRESAR</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="button-row">
+          <ion-col size="12" class="ion-text-center">
+            <ion-button fill="clear" size="small" class="transparent-on-hover" routerLink="/restablecer">Restablecer contraseña</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>      
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Registro -->
+  <div class="register-container">
+    <h2>Registro</h2>
+    <p>Si aún no tienes una cuenta, puedes registrarte aquí:</p>
+    <a [routerLink]="['/registro']"><button class="register-button">REGISTRO</button></a>
+  </div>
