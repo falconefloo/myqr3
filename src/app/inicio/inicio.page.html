@@ -20,14 +20,10 @@
         <img src="/assets/sede_melipilla.jpg" alt="Logo de la empresa" class="company-logo">
       </div>
 
-      <ion-item class="item" *ngFor="let personaje of personajes" [routerLink]="['/perfil/' + personaje.id ]">
-        <ion-avatar aria-hidden="true" class="imagen" slot="start">
-          <img src="{{ personaje.image }}" alt="">
-        </ion-avatar>
-        <ion-label>{{ personaje.name }}</ion-label>
-      </ion-item>
+      
 
-      <ion-button expand="block" size="large" class="attendance-button">Pasar Asistencia</ion-button>
+      
+      <ion-button expand="block" size="large" class="attendance-button" routerLink="/generarqr">Pasar Asistencia</ion-button>
     </ion-card-content>
   </ion-card>
 
