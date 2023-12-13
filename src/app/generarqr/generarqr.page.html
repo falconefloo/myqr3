@@ -5,17 +5,20 @@
         <ion-menu-button></ion-menu-button>
         <ion-back-button icon="arrow-back" defaultHref="/"></ion-back-button>
       </ion-buttons>
-      <ion-title>Pasar asistencia</ion-title>
+      <ion-title color="#FF7F00">Pasar asistencia</ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content [fullscreen]="true">
-    <div style=" display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 50px;">
-      <ion-text color="primary">
-        <h1>Pasar asistencia</h1>
-      </ion-text>
-      <input type="text" [(ngModel)]="texto" style="text-align: center; color: transparent; background-color: transparent; border: none;" >
-      <br> <br>
-      <qrcode [qrdata]="texto" [width]="400"></qrcode>
-    </div>
+    
+        
+      
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+        <qrcode [qrdata]="'qrCodeString'" 
+        [width]="256" 
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+      </ion-card-content>
+    </ion-card>
   </ion-content>

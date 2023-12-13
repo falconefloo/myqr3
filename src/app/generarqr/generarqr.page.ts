@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './generarqr.page.html',
   styleUrls: ['./generarqr.page.scss'],
 })
-export class GenerarqrPage implements OnInit {
+export class GenerarqrPage {
   texto: any;
+  qrCodeString:any;
   constructor() { }
 
   ngOnInit() {

@@ -8,9 +8,10 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 import { HttpClientModule } from '@angular/common/http';
+import {QRCodeModule}  from 'angularx-qrcode';
 
 @NgModule({
-  imports: [
+  imports: [QRCodeModule,
     CommonModule,
     FormsModule,
     IonicModule,
